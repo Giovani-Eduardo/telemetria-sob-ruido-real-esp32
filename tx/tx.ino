@@ -55,6 +55,7 @@ void transmitFrame() {
   lastFrame = start;
 
   // Espacamento explicito entre bytes: o injetor identifica cada start bit.
+
   // delay(2) organiza bytes; a duracao dos pulsos de ruido e feita por GPTimer.
   for (size_t i = 0; i < FRAME_SIZE; ++i) {
     Serial2.write(frame[i]); Serial2.flush(true);
